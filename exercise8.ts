@@ -5,7 +5,6 @@
 interface Country {
     name: string;
     code: string;
-    population : number;
 }
 
 // Complete the `CountryWithPopulation` interface:
@@ -13,9 +12,7 @@ interface Country {
 // - Extend the `Country` interface
 // - Add a `population` property with an appropriate type
 
-interface CountryWithPopulation {
-name : string;
-code : string;
+interface CountryWithPopulation extends Country{
 population : number;
 }
 
@@ -27,8 +24,7 @@ const countryA: CountryWithPopulation = {
 
 const countryB: Country = {
     name: "Italy",
-    code: "IT",
-    population : 34343,
+    code: "IT"
 };
 
 const countryC: CountryWithPopulation = {
