@@ -23,17 +23,17 @@ async function fetchData<Type>(url: string) {
     return responseBody as Type;
 }
 
-interface User {
+interface User  {
     name: string;
 }
 
 // Pass the `User` type as a type argument to the generic `fetchData()` function.
 // This should fix the type error on Line 35.
 
-let user = await fetchData("http://api.com/user/1");
+let user  =  await fetchData<User>("http://api.com/user/1");
 
 console.log(user.name);
-
+ 
 // ----
 
 export {};
