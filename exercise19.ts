@@ -22,7 +22,7 @@ interface CountryLanguages {
 
 type CountryWithLanguages = Country;
 
-const countryA: CountryWithLanguages = {
+const countryA: CountryWithLanguages & CountryLanguages = {
     name: "Greece",
     code: "GR",
     languages: ["Greek"]
@@ -36,8 +36,8 @@ const countryA: CountryWithLanguages = {
 //
 // Add a type annotation with the `CountryWithStatistics` type on
 // the variable `countryB`.
-
-const countryB = {
+type CountryWithStatistics = Country
+const countryB : CountryWithStatistics & CountryStatistics= {
     name: "China",
     code: "CN",
     population: 1_412_600_000
